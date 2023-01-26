@@ -12,12 +12,11 @@ namespace Task2._1
 {
     public class PageObject
     {
-        private static IWebDriver driver;
+        private static IWebDriver driver = Singleton.Driver();
         private Actions actions = new Actions(Singleton.Driver());
 
-        public PageObject(IWebDriver Driver)
+        public PageObject()
         {
-            driver = Driver;
         }
 
         public string GetCurrentURL()
