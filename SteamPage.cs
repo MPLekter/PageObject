@@ -11,12 +11,10 @@ namespace Task2._1
 {
     public class SteamPage : PageObject
     {
-        private static IWebDriver driver;
         public IWebElement privacyPolicyButton = Singleton.Driver().FindElement(By.XPath("//*[@id=\"footer_text\"]/div[2]/a[1]"));
 
-        public SteamPage(IWebDriver Driver) : base(Driver)
+        public SteamPage()
         {
-            driver = Driver;
         }
     }
 }
